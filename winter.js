@@ -16,7 +16,7 @@ let nl_bg = "#fff";
 if(nl_pr.get('bg')){
   nl_bg = nl_pr.get('bg');
 }
-document.body.insertAdjacentHTML('afterbegin',`
+document.body.insertAdjacentHTML('afterbegin','
   <div class="nexloader">
   <img src="https://icons8.com/preloaders/preloaders/1473/Winter.gif" alt="NexLoader Loading...">
   </div>
@@ -43,7 +43,7 @@ document.body.insertAdjacentHTML('afterbegin',`
       transform: translate(-50%,-50%);
 }
 </style>
-`);
+');
 document.onload =  setTimeout(function(){
     document.querySelector('.nexloader').style.display = "none";
   }
