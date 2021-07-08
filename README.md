@@ -54,7 +54,7 @@ body {
 ## Customization
 You can Customize NexLoader according to your need to match your websites theme in the following ways.
 ### Logo
-To Customize the logo of NexLoader, just change the background image url with that of yours like in the below example.
+To Customize the logo of NexLoader, just change the background image's url with that of yours like in the below example.
 ```
 ...
 #nex-icon {
