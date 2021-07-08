@@ -65,9 +65,27 @@ To Customize the logo of NexLoader, just change the background image's url with 
 ...
 ```
 #### Some Animations/images Chosen for NexLoader
-[![Circle Loader](https://icons8.com/preloaders/preloaders/1484/Circles-menu-3.gif)](https://icons8.com/preloaders/)
+[
+![Winter](https://icons8.com/preloaders/preloaders/1473/Winter.gif)
+![Rocket](https://icons8.com/preloaders/preloaders/1476/Rocket.gif)
+![Plant](https://icons8.com/preloaders/preloaders/1477/Plant.gif)
+![Ghost](https://icons8.com/preloaders/preloaders/1479/Ghost.gif)
+![Fidget Spinner](https://icons8.com/preloaders/preloaders/1480/Fidget-spinner.gif)
+![Book](https://icons8.com/preloaders/preloaders/1481/Book.gif)
+![]()
+![]()
+![]()
+![]()
+![]()
+![]()
+![]()
+![]()
+![]()
+![]()
+![]()
 
-  
+](https://icons8.com/preloaders/)
+
 All the images(& logos) used in NexLoader are neither created by me nor owned by me, they are taken from [Preloaders.net(Icons8)](https://icons8.com/preloaders/).
 ### Background Color
 To change the the background color of NexLoader just change the #fff in ```background-color:#fff;``` with the hex code of the color you want.
