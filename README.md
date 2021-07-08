@@ -5,10 +5,10 @@ A Lightweight & attractive Preloader to make your website even more cool.
 # Usage
 To add NexLoader to Your Website, all you need to do is to add the below code to you site.
 
-You can Customize this code according to you need.
+You can Customize this code according to you need.  
 Note: Jquery is necessary to use NexLoader on your website.
+### CSS
 ```
-<style>
 body {
   overflow: hidden;
 }
@@ -19,41 +19,54 @@ body {
   left:0;
   right:0;
   bottom:0;
-  background-color:#fff; /* change if the mask should have another color then white */
-  z-index:99; /* makes sure it stays on top */
+  background-color:#fff;
+  z-index:99;
 }
 #nex-icon {
   width:200px;
   height:200px;
   position:absolute;
-  left:50%; /* centers the loading animation horizontally one the screen */
-  top:50%; /* centers the loading animation vertically one the screen */
-  background-image:url(https://icons8.com/preloaders/preloaders/1473/Winter.gif); /* path to your loading animation */
+  left:50%;
+  top:50%;
+  background-image:url(https://icons8.com/preloaders/preloaders/1473/Winter.gif);
   background-repeat:no-repeat;
   background-position:center;
-  margin:-100px 0 0 -100px; /* is width and height divided by two */
+  margin:-100px 0 0 -100px;
 }
-</style>
+```
+### HTML
+```
 <!-- NexLoader -->
 <div id="nexloader">
 <div id="nex-icon">&nbsp;</div>
 </div>
-<script type="text/javascript">
+```
+### Javascript
+```
 //<![CDATA[
-  $(window).on('load', function() { // makes sure the whole site is loaded 
-    $('#nex-icon').delay(3500).fadeOut(); // will first fade out the loading animation 
-    $('#nexloader').delay(3500).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+  $(window).on('load', function() {
+    $('#nex-icon').delay(3500).fadeOut();
+    $('#nexloader').delay(3500).fadeOut('slow');
     $('body').delay(3500).css({'overflow':'visible'});
  })
 //]]>
-</script>
 ```
-## Separately
-### CSS
+## Customization
+You can Customize NexLoader according to your need to match your websites theme in the following ways.
+### Logo
+To Customize the logo of NexLoader, just change the background image url with that of yours like in the below example.
 ```
-
+...
+#nex-icon {
+..
+  background-image:url(https://icons8.com/preloaders/preloaders/1484/Circles-menu-3.gif); 
+..
+}
+...
 ```
-### Customisation
-
-All the images used in NexLoader are neither created by me nor owned by me, they are taken from [Preloaders.net(Icons8)](https://icons8.com/preloaders/).
-
+All the images(& logos) used in NexLoader are neither created by me nor owned by me, they are taken from [Preloaders.net(Icons8)](https://icons8.com/preloaders/).
+### Background Color
+To change the the background color of NexLoader just change the #fff in ```background-color:#fff;``` with the hex code of the color you want.
+### NexLoader FadeOut Time
+To change the fade out time of NexLoader just change ```3500``` in the javascript.
+**Remember the time is in miliseconds, i.e. 1000 = 1 sec**
