@@ -1,50 +1,40 @@
-//Getting Current script parameter
-let nl_pr = new URL(document.currentScript.src);
-nl_pr = nl_pr.searchParams;
-console.log(nl_pr.get('id'));
-//Time Control
-let nl_t = 2000;
-if(nl_pr.get('t')){
-  nl_t = nl_pr.get('t') * 1000;
-} else {
-  nl_t = 2000;
+document.write("<style>
+body {
+  overflow: hidden;
 }
-if(nl_pr.get('full')){
-  document.querySelector('.nexloader img').width = "100%";
+/* Preloader */
+#preloader {
+  position: fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background-color:#fff; /* change if the mask should have another color then white */
+  z-index:99; /* makes sure it stays on top */
 }
-let nl_bg = "#fff";
-if(nl_pr.get('bg')){
-  nl_bg = nl_pr.get('bg');
-}
-document.body.insertAdjacentHTML('afterbegin','
-  <div class="nexloader">
-  <img src="https://icons8.com/preloaders/preloaders/1473/Winter.gif" alt="NexLoader Loading...">
-  </div>
-  <style>
-.nexloader {
-      top: 50%;
-      left:50%;
-      transform: translate(-50%,-50%);
-      display: block;
-      position: fixed;
-      background: #fff;
-      z-index: 1920;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-}
-.nexloader:hover{
-  opacity: .7;
-}
-.nexloader img {
-      position: absolute;
-      top: 50%;
-      left:50%;
-      transform: translate(-50%,-50%);
+#status {
+  width:200px;
+  height:200px;
+  position:absolute;
+  left:50%; /* centers the loading animation horizontally one the screen */
+  top:50%; /* centers the loading animation vertically one the screen */
+  background-image:url(https://icons8.com/preloaders/preloaders/1473/Winter.gif); /* path to your loading animation */
+  background-repeat:no-repeat;
+  background-position:center;
+  margin:-100px 0 0 -100px; /* is width and height divided by two */
 }
 </style>
-');
-document.onload =  setTimeout(function(){
-    document.querySelector('.nexloader').style.display = "none";
-  }
-  ,nl_t)
+<!-- Preloader -->
+<div id="preloader">
+<div id="status">&nbsp;</div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+  $(window).on('load', function() { // makes sure the whole site is loaded 
+    $('#status').fadeOut(); // will first fade out the loading animation 
+    $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+    $('body').delay(350).css({'overflow':'visible'});
+ })
+//]]>
+</script>
+");
