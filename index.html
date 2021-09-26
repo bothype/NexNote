@@ -4,8 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NexNote</title>
-<link href="https://cdn.jsdelivr.net/gh/djibe/material@4.6.0-rc.2/css/material.min.css" rel="stylesheet" crossorigin>
-<link href="https://cdn.jsdelivr.net/gh/djibe/material@4.6.0-rc.2/css/material-plugins.min.css" rel="stylesheet" crossorigin>
 </head>
 <body>
 <style>
@@ -28,14 +26,6 @@ textarea{
 }
 </style>
 <textarea id="notepad" placeholder="Start typing Here..."></textarea>
-<div class="btn-float-dropdown dropup">
-<button aria-expanded="false" aria-haspopup="true" class="btn btn-float btn-primary" data-toggle="dropdown" type="button"><i class="material-icons">add</i></button>
-<div class="dropdown-menu">
-<button class="btn btn-float btn-light" type="button"><i class="material-icons">link</i></button>
-<button class="btn btn-float btn-light" type="button"><i class="material-icons">link</i></button>
-<button class="btn btn-float btn-light" type="button"><i class="material-icons">link</i></button>
-</div>
-</div>
 <script>
 var d = document;
 // not using this at the moment but might do later for graceful degradation...
@@ -56,8 +46,5 @@ d.addEventListener('DOMContentLoaded', function(){
   }
 });
 </script>
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin></script>
-<script src="https://cdn.jsdelivr.net/gh/djibe/material@4.6.0-rc.2/js/material.min.js" crossorigin></script>
 </body>
 </html>
