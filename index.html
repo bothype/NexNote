@@ -29,6 +29,12 @@ textarea{
   box-sizing: border-box;
   outline: 0;
 }
+#btn-more{
+  float: right !important;
+  right: 8px;
+  bottom: 8px;
+  position: fixed;
+}
 </style>
 <nav class="navbar navbar-dark bg-dark">
 <div class="container-fluid">
@@ -39,6 +45,7 @@ NexNote
 </div>
 </nav>
 <textarea id="notepad" placeholder="Start typing Here..."></textarea>
+<button id="btn-more" type="button" class="btn btn-primary">•••</button>
 <script>
 var d = document;
 // not using this at the moment but might do later for graceful degradation...
